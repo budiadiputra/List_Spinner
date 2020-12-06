@@ -1,0 +1,8 @@
+List_awal = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+def counterclockwise(List_awal):
+  h = ([[List_awal[0][2], List_awal[1][2], List_awal[2][2]],[List_awal[0][1], List_awal[1][1], List_awal[2][1]],[List_awal[0][0], List_awal[1][0], List_awal[2][0]]])
+
+  return h
+  
+print(counterclockwise(List_awal))
