@@ -1,12 +1,29 @@
-List_awal = [[1, 2, 3], 
-            [4, 5, 6], 
-            [7, 8, 9]]
+def List_Spinner(List_awal):
+  h = [
+      [0, 0, 0], 
+      [0, 0, 0], 
+      [0, 0, 0]
+      ]
+  i1 = 0                              
+  i2 = 2                              
+  i3 = 0    
+  i4 = 0    
+  while True:                      
+      h[i4][i3] = List_awal[i1][i2]         
+      i1 += 1                               
+      i3 += 1 
+      if  i1 == len(h) and i3 == len(h):           
+          i1 = 0 
+          i3 = 0                                      
+          i4 += 1                           
+          i2 -= 1                                       
 
-def counterclockwise(List_awal):
-  h = ([[List_awal[0][2], List_awal[1][2], List_awal[2][2]],
-      [List_awal[0][1], List_awal[1][1], List_awal[2][1]],
-      [List_awal[0][0], List_awal[1][0], List_awal[2][0]]])
+          if i2 < 0 and i4 == len(h):                                 
+            x = h  # Keluarin nilai
+            break                                     
+  return x
 
-  return h
-  
-print(counterclockwise(List_awal))
+x = [[1, 2, 3], 
+    [4, 5, 6], 
+    [7, 8, 9]]
+print(List_Spinner(x))
